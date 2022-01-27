@@ -175,6 +175,7 @@ input:checked+.slider:before {
     z-index: 100;
 }
 
+
 .hand {
     width: 50%;
     right: 50%;
