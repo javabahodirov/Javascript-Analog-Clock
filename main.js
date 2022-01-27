@@ -6,7 +6,6 @@ let secondHand = document.getElementById("seconds-hand");
 //function for move of clock's hands
 function move() {
     let now = new Date();
-
     let seconds = now.getSeconds();
     let secondsDegrees = ((seconds / 60) * 360) + 90;
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
