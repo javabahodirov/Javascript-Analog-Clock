@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Analog Clock</title>
+</head>
+
+<body>
+    <!--switch-->
+    <div class="switch-box">
+        <label class="switch">
+            <input type="checkbox" id="myCheck" onclick="darkMode()">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <!--main box-->
+    <div class="container">
+        <!--clock main circle-->
+        <div class="clock" id="idClock">
+            <!--face of clock with marks-->
+            <div class="outer-face">
+                <div class="mark-one" id="markOne"></div>
+                <div class="mark-two" id="markTwo"></div>
+                <div class="mark-three" id="markThree"></div>
+                <div class="mark-four" id="markFour"></div>
+
+                <!--face of clock with hands-->
+                <div class="inner-face" id="innerFace">
+                    <div class="center-round" id="centerRound"></div>
+                    <div class="hand" id="hours-hand"></div>
+                    <div class="hand" id="minutes-hand"></div>
+                    <div class="hand" id="seconds-hand"></div>
+                    <p class="by-me">by Bakhodirov</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--js code-->
+    <script src="./main.js"></script>
+</body>
+
+</html>

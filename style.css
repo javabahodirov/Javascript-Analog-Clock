@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    pad: 0;
+}
+
+body {
+    background: #fff;
+    font-size: 2rem;
+}
+
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch-box {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    z-index: 1;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    background-color: #000;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    top: -50%;
+    background-color: rgb(100, 100, 100);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #ccc;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #ccc;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(32px);
+    -ms-transform: translateX(32px);
+    transform: translateX(32px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    box-shadow: rgb(36, 36, 36) 6px 6px 20px 0px inset, rgba(36, 36, 36, 0.3) -3px -3px 5px 0px inset;
+}
+
+.outer-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-face::after {
+    position: absolute;
+    content: '';
+    background: rgb(255, 0, 0);
+    width: 6px;
+    height: 90%;
+}
+
+.outer-face::before {
+    position: absolute;
+    content: '';
+    background: rgb(255, 0, 0);
+    width: 6px;
+    height: 90%;
+    transform: rotate(90deg);
+}
+
+.mark-one {
+    content: '';
+    position: absolute;
+    background: #000;
+    width: 6px;
+    height: 90%;
+    transform: rotate(30deg);
+}
+
+.mark-two {
+    content: '';
+    position: absolute;
+    background: #000;
+    width: 6px;
+    height: 90%;
+    transform: rotate(60deg);
+}
+
+.mark-three {
+    content: '';
+    position: absolute;
+    background: #000;
+    width: 6px;
+    height: 90%;
+    transform: rotate(120deg);
+}
+
+.mark-four {
+    content: '';
+    position: absolute;
+    background: #000;
+    width: 6px;
+    height: 90%;
+    transform: rotate(150deg);
+}
+
+.inner-face {
+    background: #fff;
+    width: 78%;
+    height: 78%;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.center-round {
+    border-radius: 50%;
+    width: 8%;
+    height: 8%;
+    background: rgb(0, 0, 0);
+    z-index: 100;
+}
+
+.hand {
+    width: 50%;
+    right: 50%;
+    background: #61afff;
+    position: absolute;
+    border-radius: 6px;
+    transform-origin: 100%;
+}
+
+#hours-hand {
+    z-index: 13;
+    width: 30%;
+    height: 10px;
+    background: #000;
+    transform: rotate(100deg);
+}
+
+#minutes-hand {
+    z-index: 12;
+    width: 40%;
+    height: 8px;
+    background: rgb(0, 0, 0);
+    transform: rotate(200deg);
+}
+
+#seconds-hand {
+    z-index: 11;
+    width: 48%;
+    height: 3px;
+    background: rgb(255, 0, 0);
+    transform: rotate(290deg);
+}
+
+.by-me {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 230px;
+    position: absolute;
+}
+
+@media only screen and (max-width: 29.9rem) {
+    .clock {
+        width: 90vw;
+        height: 90vw;
+    }
+}
